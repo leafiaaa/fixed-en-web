@@ -2,7 +2,7 @@
   // ── 1. Fetch and inject navbar ──────────────────────────────
   const placeholder = document.getElementById("navbar-placeholder");
   if (!placeholder) return;
-fetch("/components/navbar.html", { cache: "no-store" })
+fetch("../components/navbar.html", { cache: "no-store" })
   .then((res) => res.text())
   .then((html) => {
     // Strip live-server's injected reload script from fetched partials
@@ -15,7 +15,7 @@ fetch("/components/navbar.html", { cache: "no-store" })
   // ── 1b. Fetch and inject footer ────────────────────────────
   const footerPlaceholder = document.getElementById("footer-placeholder");
   if (footerPlaceholder) {
-    fetch("/components/footer.html")
+    fetch("../components/footer.html")
       .then((res) => res.text())
       .then((html) => {
         footerPlaceholder.innerHTML = html;
