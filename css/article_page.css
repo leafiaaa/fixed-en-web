@@ -154,6 +154,7 @@ body:has(.article-page) {
   flex-direction: column;
   gap: var(--space-5);
   min-width: 0;
+  padding-top: var(--space-10);
 }
 
 /* ==========================================================================
@@ -322,7 +323,7 @@ body:has(.article-page) {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.5em;
+  top: 0.2em;
   width: 14px;
   height: 14px;
   border-radius: var(--radius-full);
@@ -332,9 +333,9 @@ body:has(.article-page) {
   content: "";
   position: absolute;
   left: 4px;
-  top: 0.72em;
-  width: 6px;
-  height: 3px;
+  top: 0.3em;
+  width: 12px;
+  height: 6px;
   border-left: 2px solid var(--color-surface);
   border-bottom: 2px solid var(--color-surface);
   transform: rotate(-45deg);
