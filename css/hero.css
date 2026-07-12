@@ -6,9 +6,28 @@
 .hero {
   position: relative;
   overflow: hidden;
-  isolation: isolate; /* keeps decorative layers from bleeding into siblings */
-  background: linear-gradient(160deg, #b2dfff 0%, #ffffff 65%);
-  padding: var(--space-16) 0;
+  isolation: isolate;
+  width: 100%;
+  background: linear-gradient(180deg, #b2dfff 0%, #d9ecff 45%, #ffffff 100%);
+  padding-block: var(--space-16) calc(var(--space-24) * 1.5);
+}
+
+/* keep real content above the decorative dot/sparkle/curve layers */
+.hero .content__margin {
+  position: relative;
+  z-index: 2;
+}
+.hero__curve {
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transform: translateX(-50%);
+  width: 160%;
+  aspect-ratio: 2.4 / 1;
+  border-radius: 50%;
+  background: var(--color-surface-raised); /* matches your body bg / next section */
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* dot grid */
