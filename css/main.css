@@ -23,7 +23,7 @@ section {
 .vertical__grid {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-20);
   justify-content: center;
 }
 .section__subtitle {
