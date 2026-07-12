@@ -110,10 +110,10 @@
 
   /* gradient text */
   background: linear-gradient(
-    135deg,
+    180deg,
     #08234d 0%,
     #1351b3 65%,
-    rgba(205, 236, 255, 0.1) 95%
+    rgba(205, 236, 255, 0.1) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
