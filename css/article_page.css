@@ -115,6 +115,8 @@ body:has(.article-page) {
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: clamp(32px, 5vw, 64px);
   align-items: start;
+  position:absolute;
+  top:0;
 }
 
 /* Content */
