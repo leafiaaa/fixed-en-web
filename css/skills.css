@@ -119,7 +119,7 @@
    TECHNIQUES — video block + zigzag accordion groups
 =========================== */
 .techniques {
-  background: var(--color-surface-raised);
+  /* background: var(--color-surface-raised); */
   overflow-x: clip;
 }
 
