@@ -590,7 +590,7 @@
 }
 
 
-@media (max-width: 860px) {
+@media (max-width: 950px) {
   .two__grid {
     grid-template-columns: 1fr;
   }
