@@ -67,6 +67,8 @@ align-content:center;}
   top: 70px;
   width: 100%;
   max-width: 220px;
+  min-height:200px;
+  max-height:200px;
 }
 .bottom__card__left {
   left: 0;
