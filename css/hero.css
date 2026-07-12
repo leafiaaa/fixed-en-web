@@ -1,16 +1,114 @@
+/* ===== Hero background: gradient + dots + sparkles ===== */
+:root {
+  --sparkle-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230156d7' d='M12 0c1 5 3 7 8 8-5 1-7 3-8 8-1-5-3-7-8-8 5-1 7-3 8-8z'/%3E%3C/svg%3E");
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* keeps decorative layers from bleeding into siblings */
+  background: linear-gradient(160deg, #b2dfff 0%, #ffffff 65%);
+  padding: var(--space-16) 0;
+}
+
+/* dot grid */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgba(1, 86, 215, 0.35) 1.5px,
+    transparent 1.6px
+  );
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 40%,
+    #000 0%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 40%,
+    #000 0%,
+    transparent 75%
+  );
+  opacity: 0.5;
+}
+
+/* scattered sparkles */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--sparkle-svg), var(--sparkle-svg), var(--sparkle-svg),
+    var(--sparkle-svg), var(--sparkle-svg), var(--sparkle-svg);
+  background-repeat: no-repeat;
+  background-size: 14px 14px, 10px 10px, 18px 18px, 12px 12px, 16px 16px,
+    10px 10px;
+  background-position: 8% 12%, 92% 8%, 85% 78%, 15% 85%, 50% 6%, 72% 45%;
+  opacity: 0.55;
+  animation: hero-sparkle-twinkle 4s ease-in-out infinite;
+}
+
+@keyframes hero-sparkle-twinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::after {
+    animation: none;
+  }
+}
+
+/* keep real content above the decorative layers */
+.hero .two__grid {
+  position: relative;
+  z-index: 1;
+}
+
 .hero__intro {
   align-content: center;
   justify-content: center;
   text-align: left;
 }
 .hero__title {
-  color: var(--color-ink);
   font-family: var(--font-en);
   font-weight: var(--weight-semibold);
   margin-top: var(--space-8);
   margin-bottom: 0;
   font-size: var(--scale-3xl);
   text-align: center;
+
+  /* gradient text */
+  background: linear-gradient(
+    135deg,
+    #08234d 0%,
+    #1351b3 65%,
+    rgba(205, 236, 255, 0.1) 95%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* fallback for browsers without background-clip: text support */
+@supports not (background-clip: text) {
+  .hero__title {
+    background: none;
+    color: var(--color-ink);
+    -webkit-text-fill-color: initial;
+  }
 }
 
 .skill_section__video iframe {
