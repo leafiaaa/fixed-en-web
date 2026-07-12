@@ -281,10 +281,13 @@ body:has(.article-page) {
 
 /* Tables */
 .info-table-wrap {
-  overflow-x: auto;
+    overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .info-table {
   width: 100%;
+  table-layout: fixed;
+  min-width: 640px; 
   border-collapse: collapse;
   font-size: var(--scale-sm);
 }
