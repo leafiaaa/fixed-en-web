@@ -40,7 +40,7 @@ body:has(.article-page) {
 .links{
     color: var(--color-blue);
     font-weight: var(--weight-semibold);
-    text-decoration: none;
+    text-decoration: underline;
 }
 .links:hover{
     color: var(--color-blue-hover);
@@ -48,7 +48,6 @@ body:has(.article-page) {
 }
 .links:active{
     color: var(--color-blue-active);
-    text-decoration: underline;
 }
 /* Breadcrumb */
 .article-page__breadcrumb {
