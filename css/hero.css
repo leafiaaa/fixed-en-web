@@ -19,7 +19,12 @@
   height: auto;
   border-radius: 18px;
 }
-
+.challenge__media img{
+    width: 100%;
+  max-width: 520px; /* both images cap at the same width */
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+}
 .challenge__intro {
   text-align: center;
   margin-top: var(--space-8);
