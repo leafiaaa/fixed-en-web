@@ -6,7 +6,7 @@
 .top__card{
     z-index:20;
     position:absolute;
-    max-width: 280px;
+    max-width: 300px;
     border-top: 12px solid var(--color-blue-card-light);
     right:100px;
     min-height:300px;
