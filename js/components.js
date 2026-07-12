@@ -170,3 +170,14 @@ function toggleSubMenu(button) {
   // 4. Toggle the arrow rotation
   button.classList.toggle('rotate');
 }
+
+// ── 1c. Fetch and inject CTA ───────────────────────────────
+  const ctaPlaceholder = document.getElementById("cta-placeholder");
+  if (ctaPlaceholder) {
+    fetch("components/cta.html")
+      .then((res) => res.text())
+      .then((html) => {
+        ctaPlaceholder.innerHTML = html;
+      })
+      .catch((err) => console.error("CTA load failed:", err));
+  }
