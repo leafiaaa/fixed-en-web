@@ -34,7 +34,7 @@ body:has(.article-page) {
   margin: 0 auto;
   padding: var(--space-8) var(--space-6) var(--space-20);
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* Breadcrumb */
@@ -121,6 +121,7 @@ body:has(.article-page) {
 .article-page__content {
   color: var(--color-ink);
   max-width: 780px;
+  min-width: 0;
 }
 .article-page__content > * + * {
   margin-top: var(--space-5);
@@ -151,6 +152,7 @@ body:has(.article-page) {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
+  min-width: 0;
 }
 
 /* ==========================================================================
