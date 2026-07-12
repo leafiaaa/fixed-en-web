@@ -179,9 +179,9 @@
 }
 
 
-/* ===== xNinja Skills carousel ===== */
+/* ===== xNinja Skills Homepage carousel ===== */
 .skills {
-  padding: clamp(48px, 7vw, 96px) 0;
+  /* padding: clamp(48px, 7vw, 96px) 0; */
   overflow: hidden; /* card peeks must not cause horizontal scroll */
   background: linear-gradient(to top, #ffffff 0%, #d2e9ff 35%, #ffffff00 90%);
 }
