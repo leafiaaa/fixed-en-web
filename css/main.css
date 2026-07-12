@@ -10,7 +10,7 @@ body{
   max-width: 1200px;
   margin: 0 auto;
   /* margin-top: var(--space-8); */
-  padding:calc(var(--space-24) + var(--space-12)) var(--page-x) 0;
+  /* padding:calc(var(--space-24) + var(--space-12)) var(--page-x) 0; */
 
 }
 section {
