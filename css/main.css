@@ -27,7 +27,7 @@ section {
   justify-content: center;
 }
 .section__subtitle {
-  margin-top: var(--space-6);
+  margin-top: var(--space-3);
   margin-bottom: var(--space-3);
   color: var(--color-ink-secondary);
   font-weight: var(--weight-regular);
