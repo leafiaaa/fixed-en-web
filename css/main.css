@@ -94,3 +94,70 @@ section {
     order: 2;
   }
 }
+
+.video-facade {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+}
+.video-facade__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-facade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+.video-facade:hover .video-facade__play {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Modal */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: var(--z-modal);
+  padding: var(--space-6);
+}
+.video-modal.is-open {
+  display: flex;
+}
+.video-modal__frame-wrap {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+.video-modal__frame-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: var(--radius-lg);
+}
+.video-modal__close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--color-surface);
+  font-size: var(--scale-xl);
+  cursor: pointer;
+}
