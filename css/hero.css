@@ -20,7 +20,7 @@
 .hero__curve {
   position: absolute;
   left: 50%;
-  bottom: -145%;
+  bottom: -365%;
   transform: translateX(-50%);
   width: 160%;
   aspect-ratio: 2.4 / 1;
