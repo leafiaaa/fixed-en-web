@@ -141,6 +141,10 @@
     -webkit-text-fill-color: initial;
   }
 }
+.skill_section__video {
+  aspect-ratio: 16 / 9; /* match your actual video ratio */
+  width: 100%;
+}
 
 .skill_section__video iframe {
   display: block;
