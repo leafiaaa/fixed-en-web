@@ -275,7 +275,7 @@
 
 /* hatched connector between steps */
 .skills__step-line {
-  flex: 0 1 clamp(48px, 10vw, 120px);
+  flex: 0 0 clamp(48px, 10vw, 120px); /* was: 0 1 clamp(...) */
   height: 12px;
   background-image: repeating-linear-gradient(
     90deg,
