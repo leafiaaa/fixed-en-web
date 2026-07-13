@@ -9,10 +9,10 @@
   align-items: center;
   height: 64px;
   padding: 0 var(--space-8);
-  background: rgba(255, 255, 255, 95); 
+  background: rgba(255, 255, 255, 95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: none; 
+  box-shadow: none;
   transition:
     background var(--transition-slow),
     box-shadow var(--transition-slow);
@@ -23,7 +23,6 @@
   align-items: center;
   text-decoration: none;
   margin-right: auto;
-  
 }
 
 .navbar__logo img {
@@ -70,7 +69,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-1);
-    background: rgba(255, 255, 255, 95) !important;
+  background: rgba(255, 255, 255, 95) !important;
   border: none;
   cursor: pointer;
   font-family: var(--font-en);
@@ -98,7 +97,7 @@
   position: absolute;
   top: calc(100% + var(--space-2));
   right: 0;
-    background: rgba(255, 255, 255, 95) !important;
+  background: rgba(255, 255, 255, 95) !important;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
@@ -117,7 +116,7 @@
   display: block;
   width: 100%;
   text-align: left;
-    background: rgba(255, 255, 255, 95) !important;
+  background: rgba(255, 255, 255, 95) !important;
   border: none;
   cursor: pointer;
   padding: var(--space-2) var(--space-3);
@@ -164,7 +163,7 @@
   right: -280px;
   width: 260px;
   height: calc(100vh - 64px);
-    background: rgba(255, 255, 255, 95) !important;
+  background: rgba(255, 255, 255, 95) !important;
   box-shadow: var(--shadow-xl);
   z-index: var(--z-overlay);
   /* padding: var(--space-6) var(--space-5); */
@@ -192,7 +191,7 @@
   transition: color var(--transition-base);
 }
 .navbar__drawer ul li button {
-  padding: var(--space-3) 0;
+  padding: var(--space-3) var(--space-4);
   font-family: var(--font-en);
   font-size: var(--scale-base);
   color: var(--color-ink);
@@ -208,7 +207,7 @@
 .dropdown__button {
   display: flex;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   padding: 12px;
   background-color: transparent;
   border: none;
@@ -224,22 +223,20 @@
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 300ms ease-in-out;
-  
+
   /* Resetting default list styles */
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-
 .drawer__submenu {
-display:none;
+  display: none;
 }
-
 
 /* The class toggled by JavaScript to open the menu */
 .drawer__submenu.show {
-display:block;
+  display: block;
 }
 
 /* --- Basic Link Styling --- */
@@ -254,8 +251,8 @@ display:block;
   background-color: #f1f1f1;
 }
 
-.drawer__links{
-    font-weight: var(--weight-bold);
+.drawer__links {
+  font-weight: var(--weight-bold);
 }
 .drawer-lang {
   display: flex;
@@ -495,13 +492,8 @@ display:block;
   }
 }
 .navbar__link li a {
-
   font-weight: var(--weight-semibold);
- 
 }
-.navbar__link button{
-
+.navbar__link button {
   font-weight: var(--weight-semibold);
- 
 }
-
