@@ -142,9 +142,15 @@ section {
 .video-modal__frame-wrap {
   width: 100%;
   max-width: 960px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9; /* was 4/3 — your video is widescreen, 16:9 fits better */
   position: relative;
 }
+
+.video-modal__frame-target {
+  position: absolute;
+  inset: 0; /* NEW — makes it fill the wrap */
+}
+
 .video-modal__frame-wrap iframe {
   width: 100%;
   height: 100%;
